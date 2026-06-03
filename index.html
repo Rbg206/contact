@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Contact</title>
     <script>
-        var waLink = "https://wa.me/9779712062974?text=Interested%20in%20Gemini%20AI%20Pro%20%2B%205TB%20offer";
+        var message = "Interested in Gemini AI Pro (5 TB) 18 months at just 9.99";
+        var waLink = "https://wa.me/9779712062974?text=" + encodeURIComponent(message);
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         
         if (isMobile) {
-            window.location.href = "whatsapp://send?phone=9779712062974&text=Interested%20in%20Gemini%20AI%20Pro%20%2B%205TB%20offer";
+            window.location.href = "whatsapp://send?phone=9779712062974&text=" + encodeURIComponent(message);
             setTimeout(function() {
                 window.location.replace(waLink);
             }, 1000);
